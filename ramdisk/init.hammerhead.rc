@@ -449,8 +449,8 @@ service time_daemon /system/bin/time_daemon
 
 service fkbootscript /sbin/fkbootscript.sh
     class late_start
-	user root
-	disabled
+    user root
+    disabled
     oneshot
 
 service qrngd /system/bin/qrngd -f

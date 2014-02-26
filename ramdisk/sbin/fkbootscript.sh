@@ -23,9 +23,14 @@ if [ ! -e /system/etc/init.d ]; then
   chown -R root.root /system/etc/init.d;
   chmod -R 755 /system/etc/init.d;
 fi;
+
+# Iniciar SQlite
+/res/ext/sqlite.sh
+
+# Iniciar Zipalign
+/res/ext/zipalign.sh
+
+# Iniciar Tweaks Lonas_KL
+/res/ext/tweaks.sh
+
 mount -o ro,remount /system /system;
-
-echo 85 1500000:90 1800000:70 > /sys/devices/system/cpu/cpufreq/interactive/target_loads
-echo 20000 1400000:40000 1700000:20000 > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-
-echo 2 > /sys/devices/system/cpu/sched_mc_power_savings
