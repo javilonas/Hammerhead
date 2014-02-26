@@ -71,7 +71,7 @@ LOOP=`ls -d /sys/block/loop*`
 RAM=`ls -d /sys/block/ram*`
 MMC=`ls -d /sys/block/mmc*`
 
-for i in $LOOP $RAM $MMC $ZSWA
+for i in $LOOP $RAM $MMC
 do 
 echo "row" > $i/queue/scheduler
 echo "0" > $i/queue/add_random
