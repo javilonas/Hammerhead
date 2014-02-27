@@ -43,6 +43,27 @@ echo "1" > /proc/sys/vm/oom_kill_allocating_task
 echo "2" > /sys/devices/system/cpu/sched_mc_power_savings
 echo "0" > /proc/sys/kernel/randomize_va_space
 
+# pegasusq tweaks
+echo "20000" > /sys/devices/system/cpu/cpufreq/pegasusq/sampling_rate
+echo "10" > /sys/devices/system/cpu/cpufreq/pegasusq/cpu_up_rate
+echo "10" > /sys/devices/system/cpu/cpufreq/pegasusq/cpu_down_rate
+echo "500000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_1_1
+echo "400000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_2_0
+echo "800000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_2_1
+echo "600000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_3_0
+echo "800000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_3_1
+echo "600000" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_freq_4_0
+echo "200" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_rq_1_1
+echo "200" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_rq_2_0
+echo "300" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_rq_2_1
+echo "300" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_rq_3_0
+echo "400" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_rq_3_1
+echo "400" > /sys/devices/system/cpu/cpufreq/pegasusq/hotplug_rq_4_0
+echo "2" > /sys/devices/system/cpu/cpufreq/pegasusq/sampling_down_factor
+echo "37" > /sys/devices/system/cpu/cpufreq/pegasusq/freq_step
+echo "85" > /sys/devices/system/cpu/cpufreq/pegasusq/up_threshold
+
+# Interactive
 echo 85 1500000:90 1800000:70 > /sys/devices/system/cpu/cpufreq/interactive/target_loads
 echo 20000 1400000:40000 1700000:20000 > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
  
